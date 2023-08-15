@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom js</title>
+</head>
+<body>
+   <ul>
+    <li class="selected">product-1</li>
+    <li class="selected">product-2</li>
+    <li class="selected">product-3</li>
+    <li class="selected">product-4</li> 
+   </ul>
+    <button id="removeBtn">Remove Class</button>
+   <script>
+    const removeBtn=document.querySelector('#removeBtn');
+    removeBtn.addEventListener('click',()=>{
+    const selectedProduct= document.querySelectorAll('li.selected');
+        for( i = 0; i <selectedProduct.length; i++){
+        const element= selectedProduct[i]
+        element.classList.remove('selected');
+        }
+    });
+   </script>
+</body>
+</html>
